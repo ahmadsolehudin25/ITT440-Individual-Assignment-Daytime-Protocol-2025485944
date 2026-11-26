@@ -1,11 +1,10 @@
 # ITT440: Daytime Protocol (RFC 867) — Cross-Platform Client-Server Implementation
 
-**Universiti Teknologi MARA (UiTM)**
-**Course:** ITT440 — Network Programming
-**Student Name:** Ahmad Solehudin Bin Muhammad
-**Student ID:** 2025485944
+**Universiti Teknologi MARA (UiTM)**  
+**Course:** ITT440 — Network Programming  
+**Student Name:** Ahmad Solehudin Bin Muhammad  
+**Student ID:** 2025485944  
 **Group:** NBCS25555A
-
 ---
 
 ## 1. Overview
