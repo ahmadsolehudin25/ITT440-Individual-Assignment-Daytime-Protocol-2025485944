@@ -1,10 +1,12 @@
 # ITT440: Daytime Protocol (RFC 867) — Cross-Platform Client-Server Implementation
 
-**Universiti Teknologi MARA (UiTM)**<br>
-**Course:** ITT440 — Network Programming<br>
-**Student Name:** Ahmad Solehudin Bin Muhammad<br>
-**Student ID:** 2025485944<br>
+**Universiti Teknologi MARA (UiTM)**
+**Course:** ITT440 — Network Programming
+**Student Name:** Ahmad Solehudin Bin Muhammad
+**Student ID:** 2025485944
 **Group:** NBCS25555A
+
+---
 
 ## 1. Overview
 This project implements the **Daytime Protocol (RFC 867)** on **well-known port 13**, using a cross-platform client-server design:
@@ -93,21 +95,21 @@ Sample RTT from the Windows client to the WSL2 server (single run each, on the s
 
 | Mode | Transport | RTT |
 |---|---|---|
-| MYT | TCP | ~2.04 ms |
-| MYT | UDP | ~2.29 ms |
-| UTC | TCP | ~2.49 ms |
-| ISO-8601 | UDP | ~1.47 ms |
-| Unix epoch | TCP | ~2.46 ms |
+| MYT | TCP | ~2.25 ms |
+| MYT | UDP | ~1.91 ms |
+| UTC | TCP | ~1.74 ms |
+| ISO-8601 | UDP | ~1.12 ms |
+| Unix epoch | TCP | ~2.03 ms |
 
 **Notes:**
 * The TCP timer starts before `connect()`, so TCP RTT **includes the 3-way handshake**; the UDP timer does not. The two are therefore not a like-for-like comparison.
-* These are single measurements on a local virtual network and vary between runs.
+* In this run, UDP was faster than TCP for the same MYT query (1.91 ms vs 2.25 ms), which is expected because UDP has no handshake. These are single measurements on a local virtual network, so the gap is small and varies between runs.
 
 **Server (left, WSL2) and Windows client (right) running side by side:**
 
 ![Server and client](screenshots/server_client.png)
 
-The UTC response (05:21) is exactly 8 hours behind MYT (13:21), and the server log shows each `[TCP]`/`[UDP]` request.
+The UTC response (09:41) is exactly 8 hours behind MYT (17:41), and the server log shows each `[TCP]`/`[UDP]` request.
 
 ---
 
