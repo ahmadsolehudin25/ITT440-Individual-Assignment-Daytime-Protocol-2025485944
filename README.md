@@ -107,7 +107,7 @@ Sample RTT from the Windows client to the WSL2 server (single run each, on the s
 
 **Server (left, WSL2) and Windows client (right) running side by side:**
 
-!server_client.png
+![Server and client](server_client.png)
 
 The UTC response (09:41) is exactly 8 hours behind MYT (17:41), and the server log shows each `[TCP]`/`[UDP]` request.
 
